@@ -38,7 +38,7 @@ output	OUT;
 
 function	SEL2_1_FUNC;
 input	A, B, SEL;
-	if ( SEL == 0 )
+	if ( SEL == 0 )                   // 如果 SEL 是 0 , OUT 則為 A ; 不然 OUT 為 B。
 			SEL2_1_FUNC = A;
 		else
 			SEL2_1_FUNC = B;
