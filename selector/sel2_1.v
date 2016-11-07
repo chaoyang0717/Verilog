@@ -28,3 +28,20 @@ output	OUT;
 	assign	OUT = ( SEL == 0 )? A: B;
 
 endmodule
+
+/* Behavior Level design	*/
+module	SEL_BL	( A, B, SEL, OUT );
+input	A, B, SEL;
+output	OUT;
+
+	assign	OUT = SEL2_1_FUNC ( A, B, SEL );
+
+function	SEL2_1_FUNC;
+input	A, B, SEL;
+	if ( SEL == 0 )
+			SEL2_1_FUNC = A;
+		else
+			SEL2_1_FUNC = B;
+endfunction
+
+endmodule
